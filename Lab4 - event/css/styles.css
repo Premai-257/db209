@@ -1,0 +1,97 @@
+html {
+    box-sizing: border-box;
+}
+
+*{
+    box-sizing: inherit;
+}
+
+#piano {
+    /*background-color: brown;*/
+    background-image: url('../css/image/aespa-next-level.gif');
+    width: 992px;
+    height: 290px;
+    margin: 80px auto;
+    border-radius: 30px;
+    padding: 90px 20px 0;
+    position: relative;
+}
+
+.keys {
+    background-color: hotpink;
+    width: 949px;
+    height: 180px;
+    padding-left: 2px;
+    overflow: hidden;
+    display: flex;
+}
+
+.octave {
+    display: flex;
+    width: 315px;
+}
+
+.key:active, .pressed {
+    transform: translateY(2px);
+}
+
+.key.black:active, .pressed {
+    z-index: 1000;
+}
+
+.key.white {
+    background-color: #fff;
+    width: 41px;
+    height: 175px;
+    /* float: left; */
+    margin: 2px;
+    border-radius: 0 0 3px 3px;
+    position: relative;
+    padding-top: 140px;
+    text-align: center;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.key.black {
+    position: relative;
+}
+
+.key.black::after {
+    background-color: black;
+    width: 32px;
+    height: 100px;
+    content: "";
+    position: absolute;
+    left:  -16px;
+    border-radius: 0 0 3px 3px;
+    z-index: 999;
+}
+
+.logo {
+    position: absolute;
+    top: 23px;
+    color: palevioletred;
+    font-size: 2em;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+@media (max-width: 768px) {
+    #piano {
+        width: 358px;
+    }
+    
+    .keys{
+        width: 318px;
+    }
+}
+
+@media(max-width: 1199px) and (max-width: 769px){
+    #piano {
+        width: 675px;
+    }
+    
+    .keys {
+        width: 633px;
+    }
+}
