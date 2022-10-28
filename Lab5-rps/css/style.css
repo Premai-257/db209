@@ -29,7 +29,7 @@ header > h1 {
     text-align: center;
     width: 200px;
     font-family: 'Space Mono', monospace;
-    font-size: 46px;
+    font-size: 32px;
     padding: 15px 20px;
     position: relative;
 }
@@ -104,4 +104,21 @@ background-color:#fff337;
     font-weight: bold;
     font-size: 20px;
     margin-top: 20px;
+}
+
+@keyframes ready {
+    0%, 100% {
+        top: 0;
+    }
+    25% {
+        top: -10px;
+    }
+    75% {
+        top: 10px;
+    } 
+}
+
+.ready {
+    position: relative;
+    animation: ready 0.5s linear infinite;
 }
