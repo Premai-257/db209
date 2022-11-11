@@ -74,7 +74,7 @@
         const focus = data.filter((d) => d.year_save == selectedYear);
         let months = new Set(focus.map((d) => d.month_save));
         months = [...months].sort(
-          (m1, m2) => months_th.indexOf(M1) - months_th.indexOf(m2)
+          (m1, m2) => months_th.indexOf(m1) - months_th.indexOf(m2)
         );
         month_filter.innerHTML = "";
         for (let m of months) {
